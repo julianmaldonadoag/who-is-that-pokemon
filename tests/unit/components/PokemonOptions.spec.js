@@ -9,6 +9,7 @@ describe("PokemonOptions component", () => {
     wrapper = shallowMount(PokemonOptions, {
       props: {
         pokemons,
+        correctPokemon: pokemons[0]
       },
     })
   })
