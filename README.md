@@ -1,4 +1,6 @@
-# 04-pokemon-game
+# Who's that pokemon
+
+Guess who is the pokemon shown on the screen.
 
 ## Project setup
 ```

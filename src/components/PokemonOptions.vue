@@ -75,9 +75,9 @@ li:hover {
   pointer-events: none;
 }
 .correct-answer {
-  background-color: #198754;
+  background-color: #198754 !important;
 }
 .incorrect-answer {
-  background-color: #dc3545;
+  background-color: #dc3545 !important;
 }
 </style>
