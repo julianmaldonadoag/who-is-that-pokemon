@@ -4,7 +4,7 @@
     <img :src="require(`@/assets/images/pokeball-open.png`)" alt="">
   </div>
   <div v-else>
-    <h1>¿Quién es este pokémon?</h1>
+    <h1>¿Quién es ese pokémon?</h1>
     <PokemonPicture 
       :pokemon-id="pokemon.id" 
       :show-pokemon="showPokemon" 
@@ -78,6 +78,7 @@ img {
   width: 400px;
 }
 .new-game {
+  font-size: 16px;
   border-radius: 5px;
   background-color: #212529;
   padding: 10px 20px;

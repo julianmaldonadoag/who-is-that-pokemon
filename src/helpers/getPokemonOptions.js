@@ -1,5 +1,9 @@
 import pokemonApi from "@/api/pokemonApi"
 
+const capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
 export const getPokemons = () => {
   const pokemonsArr = Array.from(Array(650))
   return pokemonsArr.map((_, index) => index + 1)
@@ -24,7 +28,11 @@ export const getPokemonNames = async ([a, b, c, d] = []) => {
 
 const getPokemonOptions = async () => {
   const mixedPokemons = getPokemons().sort(() => Math.random() - 0.5)
-  const pokemons = await getPokemonNames(mixedPokemons.splice(0, 4))
+  let pokemons = await getPokemonNames(mixedPokemons.splice(0, 4))
+  pokemons = pokemons.map(pokemon => ({
+    id: pokemon.id,
+    name: capitalizeFirstLetter(pokemon.name),
+  }))
 
   return pokemons
 }
