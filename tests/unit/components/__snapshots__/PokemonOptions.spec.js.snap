@@ -3,10 +3,10 @@
 exports[`PokemonOptions component should match with snapshot 1`] = `
 <div class="options-container">
   <ul>
-    <li>bulbasaur</li>
-    <li>ivysaur</li>
-    <li>venusaur</li>
-    <li>charmander</li>
+    <li class="">bulbasaur</li>
+    <li class="">ivysaur</li>
+    <li class="">venusaur</li>
+    <li class="">charmander</li>
   </ul>
 </div>
 `;

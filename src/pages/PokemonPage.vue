@@ -1,19 +1,23 @@
 <template>
-  <h1 v-if="!pokemon">Espere un momento por favor...</h1>
+  <div v-if="!pokemon">
+    <h1>Espere un momento por favor...</h1>
+    <img :src="require(`@/assets/images/pokeball-open.png`)" alt="">
+  </div>
   <div v-else>
-    <h1>¿Quién es este pokémon?</h1>
+    <h1>¿Quién es ese pokémon?</h1>
     <PokemonPicture 
       :pokemon-id="pokemon.id" 
       :show-pokemon="showPokemon" 
     />
     <PokemonOptions 
       :pokemons="pokemonArr" 
+      :correct-pokemon="pokemon"
       @chosen-pokemon="checkAnswer" 
     />
 
     <template v-if="showAnswer">
       <h2 class="fade-in">{{ message }}</h2>
-      <button @click="newGame">
+      <button @click="newGame" class="new-game">
         Nuevo juego
       </button>
     </template>
@@ -69,3 +73,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+img {
+  width: 400px;
+}
+.new-game {
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #212529;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+</style>
